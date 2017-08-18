@@ -20,9 +20,8 @@ router.route('/').post(upload.single('imageFile'), function(req, res, next){
     console.log(req.file);
     var response = {
         code : 0,
-        path: file.path
+        path: file.filename
     };
-    console.log( response );
     res.end( JSON.stringify( response ) );
 });
 
